@@ -358,15 +358,32 @@
             connect. Fill the form or reach out directly.
           </p>
         </div>
-        <form class="contact__form reveal" id="contactForm">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact__form reveal"
+          id="contactForm"
+        >
           <div class="form__row">
             <div class="form__group">
+              <input
+                type="hidden"
+                name="access_key"
+                value="9d50ffec-aa28-4819-8f27-f66420a744cd"
+              />
               <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="John Smith" required />
+              <input
+                name="name"
+                type="text"
+                id="name"
+                placeholder="John Smith"
+                required
+              />
             </div>
             <div class="form__group">
               <label for="email">Email Address</label>
               <input
+                name="email"
                 type="email"
                 id="email"
                 placeholder="john@company.com"
@@ -389,6 +406,7 @@
           <div class="form__group">
             <label for="message">Tell me about the opportunity</label>
             <textarea
+              name="message"
               id="message"
               rows="5"
               placeholder="We're looking for a BD manager to help grow our crypto platform..."
