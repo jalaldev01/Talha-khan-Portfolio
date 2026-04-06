@@ -80,14 +80,13 @@ document
   .forEach((el) => revealObserver.observe(el));
 
 // ---- CONTACT FORM ----
-const form = document.getElementById("form");
+const form = document.getElementById("contactForm");
 const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(form);
-  formData.append("access_key", "9d50ffec-aa28-4819-8f27-f66420a744cd");
 
   const originalText = submitBtn.textContent;
 
@@ -128,4 +127,34 @@ marquee.addEventListener("mouseenter", () => {
 });
 marquee.addEventListener("mouseleave", () => {
   marquee.style.animationPlayState = "running";
+});
+
+// ---- THEME TOGGLE ----
+const themeToggleBtn = document.getElementById("themeToggle");
+const sunIcon = document.querySelector(".sun-icon");
+const moonIcon = document.querySelector(".moon-icon");
+
+// Check for saved user preference, if any, on load of the website
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  if (currentTheme === "light") {
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block";
+  }
+}
+
+themeToggleBtn.addEventListener("click", () => {
+  let theme = document.documentElement.getAttribute("data-theme");
+  if (theme === "light") {
+    document.documentElement.removeAttribute("data-theme");
+    localStorage.setItem("theme", "dark");
+    sunIcon.style.display = "block";
+    moonIcon.style.display = "none";
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block";
+  }
 });

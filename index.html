@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -21,10 +21,16 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav__cta">Hire Me</button>
-      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__actions" style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="nav__cta">Hire Me</button>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -46,9 +52,9 @@
           frontier.
         </h1>
         <p class="hero__sub fade-up delay-2">
-          I'm Talha — a Business Development &amp; Social Media Management
+          I'm Talha a Business Development &amp; Social Media Management
           professional from Swat, Pakistan. I specialize in BD strategy,
-          partnerships, community growth, and digital brand management —
+          partnerships, community growth, and digital brand management
           particularly within the crypto and Web3 ecosystem.
         </p>
         <div class="hero__actions fade-up delay-3">
@@ -112,11 +118,45 @@
         <h2 class="section__title">Work Experience</h2>
       </div>
       <div class="exp__timeline">
+        <!-- PropW -->
+        <div class="exp__card reveal">
+          <div class="exp__meta">
+            <span class="exp__date">Jan 2026 – Present</span>
+            <span class="exp__tag">Full-time</span>
+          </div>
+
+          <div class="exp__body">
+            <div class="exp__logo exp__logo--propw">
+              <img
+                src="./assets/images/projects/propw.jpeg"
+                alt="PropW"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="exp__content">
+              <h3>Sales Business Development</h3>
+              <p class="exp__company">PropW</p>
+              <ul class="exp__points">
+                <li>
+                  PropW is a funded account provider that allows traders to access capital and grow their trading journey. My goal in this campaign was to drive account sales through community promotions, referral programs, and influencer activations.
+                </li>
+                <li>
+                  The campaign focused on highlighting PropW’s unique offerings, building trust among traders, and making account purchases simple and attractive.
+                </li>
+                <li>
+                  The result was 200+ accounts sold, generating total sales worth 20,000 USD.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- BingX Exchange -->
         <div class="exp__card reveal">
           <div class="exp__meta">
             <span class="exp__date">Jul 2025 – Dec 2025</span>
             <span class="exp__tag">Full-time</span>
           </div>
+
           <div class="exp__body">
             <div class="exp__logo exp__logo--bingx">
               <img
@@ -129,22 +169,19 @@
               <p class="exp__company">BingX Exchange</p>
               <ul class="exp__points">
                 <li>
-                  Drove significant trading volume growth through affiliate and
-                  community-based acquisition strategies.
+                  BingX Exchange is a global cryptocurrency trading platform offering spot, derivatives, and copy trading services. My goal in this role was to drive trading volume and scale user acquisition through strategic partnerships and community-led initiatives.
                 </li>
                 <li>
-                  Built and managed high-performing partnerships and influencer
-                  collaborations.
+                  I contributed by building and managing high-performing affiliate networks, collaborating with influencers, and activating crypto communities to boost engagement and conversions. I also played a key role in expanding market reach across multiple regions through targeted growth strategies.
                 </li>
                 <li>
-                  Played a key role in expanding BingX's user base and market
-                  reach across regions.
+                  The result was consistent trading volume growth, achieving $50M+ monthly volume, along with a significant increase in active users and overall platform adoption.
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
+        <!-- Socrates Global -->
         <div class="exp__card reveal">
           <div class="exp__meta">
             <span class="exp__date">Apr 2024 – Jun 2025</span>
@@ -152,70 +189,29 @@
           </div>
           <div class="exp__body">
             <div class="exp__logo exp__logo--socrates">
-              <img src="./assets/images/projects/socrate.jpeg" alt="Socrate" />
+              <img src="./assets/images/projects/socrate.jpeg" alt="Socrates Global" />
             </div>
             <div class="exp__content">
               <h3>Ambassador Head</h3>
-              <p class="exp__company">Socrates</p>
+              <p class="exp__company">Socrates Global</p>
               <ul class="exp__points">
                 <li>
-                  Led global ambassador programs to strengthen brand presence
-                  and community engagement.
+                  Socrates Global is a Web3 platform focused on building a decentralized, knowledge-driven ecosystem that empowers users through community engagement and participation. My goal in this role was to expand global brand presence and drive user engagement through structured ambassador programs.
                 </li>
                 <li>
-                  Managed and coordinated ambassador teams across multiple
-                  regions worldwide.
+                  I led and scaled global ambassador initiatives, managing and coordinating teams across multiple regions to ensure consistent growth and activity. I executed targeted campaigns that increased user adoption and strengthened brand visibility.
                 </li>
                 <li>
-                  Executed growth campaigns that increased user adoption and
-                  brand visibility.
+                  Additionally, I collaborated closely with marketing and product teams to align community feedback with business objectives, helping enhance overall platform experience.
                 </li>
                 <li>
-                  Collaborated with marketing and product teams to align
-                  community feedback with business goals.
+                  The result was strong global community expansion, onboarding 30K+ users, along with increased engagement and improved brand positioning across key markets.
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="exp__card reveal">
-          <div class="exp__meta">
-            <span class="exp__date">Jan 2024 – Mar 2024</span>
-            <span class="exp__tag">Internship</span>
-          </div>
-          <div class="exp__body">
-            <div class="exp__logo exp__logo--mexc">
-              <img
-                src="./assets/images/projects/mexc.jpeg"
-                alt="Mexc Exchange"
-              />
-            </div>
-            <div class="exp__content">
-              <h3>Business Development Intern</h3>
-              <p class="exp__company">MEXC Exchange</p>
-              <ul class="exp__points">
-                <li>
-                  Focused on business development and market expansion
-                  strategies over a 3-month program.
-                </li>
-                <li>
-                  Assisted in partner outreach, user acquisition initiatives,
-                  and community engagement activities.
-                </li>
-                <li>
-                  Gained hands-on experience in affiliate programs, campaign
-                  execution, and BD operations.
-                </li>
-                <li>
-                  Developed a strong understanding of trading volume growth
-                  models and exchange BD workflows.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+        <!-- Bybit -->
         <div class="exp__card reveal">
           <div class="exp__meta">
             <span class="exp__date">May 2023 – Jul 2024</span>
@@ -223,30 +219,47 @@
           </div>
           <div class="exp__body">
             <div class="exp__logo exp__logo--bybit">
-              <img
-                src="./assets/images/projects/bybit.jpeg"
-                alt="Bybit Exchange"
-              />
+              <img src="./assets/images/projects/bybit.jpeg" alt="Bybit" />
             </div>
             <div class="exp__content">
               <h3>Brand Ambassador</h3>
               <p class="exp__company">Bybit</p>
               <ul class="exp__points">
                 <li>
-                  Promoted Bybit through community-driven marketing and
-                  influencer collaborations.
+                  Bybit is a leading cryptocurrency exchange offering derivatives, spot trading, and copy trading services, focused on delivering a fast and user-friendly trading experience. My goal in this role was to drive user acquisition and strengthen brand presence through community-driven marketing and influencer collaborations.
                 </li>
                 <li>
-                  Generated verified user referrals and contributed to platform
-                  adoption.
+                  I promoted the platform across crypto communities and social channels, generated verified user referrals, and supported brand awareness campaigns to boost engagement. I also acted as a bridge between the community and the platform, helping improve user trust and retention.
                 </li>
                 <li>
-                  Supported brand awareness campaigns and engagement initiatives
-                  across social platforms.
+                  The result was successful onboarding of 10K+ verified users, contributing to increased platform adoption and overall growth.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Bitvert -->
+        <div class="exp__card reveal">
+          <div class="exp__meta">
+            <span class="exp__date">Jan 2024 – Mar 2024</span>
+            <span class="exp__tag">Internship</span>
+          </div>
+          <div class="exp__body">
+            <div class="exp__logo exp__logo--mexc">
+              <img src="./assets/images/projects/Bitvert.jpeg" alt="Bitvert" />
+            </div>
+            <div class="exp__content">
+              <h3>Business Development</h3>
+              <p class="exp__company">Bitvert</p>
+              <ul class="exp__points">
+                <li>
+                  Bitvert is a crypto marketing agency focused on helping Web3 projects scale through strategic growth, partnerships, and community-driven campaigns. My goal in this role was to drive business expansion by acquiring new clients and supporting their growth through effective marketing strategies.
                 </li>
                 <li>
-                  Acted as a liaison between the community and the platform to
-                  improve user trust and retention.
+                  I contributed by building partnerships with projects, collaborating with influencers and communities, and supporting campaign planning and execution to increase brand exposure and user acquisition.
+                </li>
+                <li>
+                  The result was successful onboarding of 5+ projects, contributing to the agency’s growth and expanding its portfolio in the Web3 space.
                 </li>
               </ul>
             </div>
